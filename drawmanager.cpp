@@ -1,3 +1,7 @@
+#include "drawmanager.h"
+#include <SFML/Graphics.hpp>
+
+
 void DrawTmpText(sf::RenderWindow* window, std::string fontPath, std::string TmpText)
 {
     sf::Font font;
