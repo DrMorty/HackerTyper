@@ -8,9 +8,9 @@
 int main()
 {
 
-    HackerTyper MainWindow(1600, 900, "Hahakektyper");
+    HackerTyper MainWindow(1600, 900, "GuseTyper");
     ReadFile("hack.txt", &MainWindow);
-    MainWindow.AppRun();
+    MainWindow.AppStart();
 
     return 0;
 }
