@@ -26,7 +26,7 @@ public:
     std::string AppText;
     std::string TmpText;
     HackerTyper(int ScrResX, int ScrResY, std::string title);
-    void AppRun();
+    void AppStart();
 
 
 
