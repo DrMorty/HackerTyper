@@ -1,6 +1,8 @@
 #include <iostream>
 #include "eventmanager.h"
 #include "drawmanager.h"
+#include <fstream>
+
 
 void ReadFile(std::string filename, HackerTyper* hackertyper)
 {
