@@ -1,15 +1,18 @@
 #include <iostream>
+#include "eventmanager.h"
+
+void ReadFile(std::string filename, HackerTyper* hackertyper)
+{
+    std::ifstream DATABASE(filename);
+    while (!DATABASE.eof()) {std::string str; std::getline(DATABASE, str); hackertyper->AppText += str; hackertyper->AppText += "\n";}
+
+}
 
 
 void Scroll(sf::RenderWindow* window, sf::View* view, int Edge, float Velocity)
 {
 
     sf::Vector2i localPosition = sf::Mouse::getPosition(*window);
-
-    /*
-    if (localPosition.x < edge) {view.move(-vel, 0); }
-    if (localPosition.x > window.getSize().x - edge) {view.move(vel, 0); }
-    */
 
     if (localPosition.y > window->getSize().y - Edge) {view->move(0, Velocity); }
     if (localPosition.y < Edge) {view->move(0, -Velocity); }
@@ -85,3 +88,4 @@ void HackerTyper::AppRun()
     }
 
 }
+
